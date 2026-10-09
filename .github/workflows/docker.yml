@@ -40,3 +40,11 @@ jobs:
           tags: |
             ghcr.io/${{ steps.meta.outputs.owner }}/5ghoul:latest
             ghcr.io/${{ steps.meta.outputs.owner }}/5ghoul:${{ github.ref_name }}
+      - name: Make the GHCR package public
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api --method PUT \
+            -H "Accept: application/vnd.github+json" \
+            "/orgs/${{ steps.meta.outputs.owner }}/packages/container/5ghoul/visibility" \
+            -f visibility=public
