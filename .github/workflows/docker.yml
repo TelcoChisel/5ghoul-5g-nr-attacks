@@ -44,7 +44,10 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          owner="${{ github.repository_owner }}"
+          echo "packages visible to this token:"
+          gh api "/orgs/${owner}/packages?package_type=container" || true
           gh api --method PUT \
             -H "Accept: application/vnd.github+json" \
-            "/orgs/${{ steps.meta.outputs.owner }}/packages/container/5ghoul/visibility" \
+            "/orgs/${owner}/packages/container/5ghoul/visibility" \
             -f visibility=public
