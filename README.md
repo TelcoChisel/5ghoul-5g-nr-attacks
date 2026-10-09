@@ -23,10 +23,10 @@ The image installs BladeRF userspace and the overlay. The OAI compile runs on fi
 
 TelcoChiselOS also publishes `telcochisel-5ghoul`, built `FROM telcochisel-base` with this same overlay.
 
-## Publish this directory as its own repository
-
 ```bash
-gh repo create TelcoSec-Tools/5ghoul-5g-nr-attacks --public --source=. --remote=origin
+docker pull ghcr.io/telcochisel/5ghoul:latest
 ```
 
-Run that from a checkout of this directory, not from the TelcoChiselOS root.
+The package is private until it is marked public:
+
+https://github.com/orgs/TelcoChisel/packages/container/5ghoul/settings

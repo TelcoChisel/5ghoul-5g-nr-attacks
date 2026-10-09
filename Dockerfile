@@ -16,7 +16,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 LABEL org.opencontainers.image.title="TelcoSec 5Ghoul" \
       org.opencontainers.image.description="TelcoSec 5Ghoul overlay — pinned asset-group/5ghoul-5g-nr-attacks with BladeRF, LimeSDR, and USRP radio backends" \
       org.opencontainers.image.version="${VERSION}" \
-      org.opencontainers.image.source="https://github.com/TelcoSec-Tools/5ghoul-5g-nr-attacks" \
+      org.opencontainers.image.source="https://github.com/TelcoChisel/5ghoul-5g-nr-attacks" \
       org.opencontainers.image.vendor="TelcoSec" \
       org.opencontainers.image.licenses="Apache-2.0"
 
